@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sylviane Guiard — Avocat à Perpignan | Droit de la famille, Immobilier, Successions</title>
+    <meta name="description" content="Maître Sylviane Guiard, avocate au Barreau de Perpignan. Droit de la famille, droit immobilier, successions, droit collaboratif. 3 Place François Arago, 66000 Perpignan.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy: #1a2744;
+            --navy-light: #2a3d5e;
+            --gold: #c5a258;
+            --gold-light: #d4b875;
+            --cream: #faf8f3;
+            --white: #ffffff;
+            --gray: #6b7280;
+            --gray-light: #f3f4f6;
+            --text: #1f2937;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text);
+            background: var(--white);
+            line-height: 1.6;
+        }
+
+        /* HEADER */
+        header {
+            background: var(--navy);
+            color: var(--white);
+            padding: 18px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        }
+        .header-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+        }
+        .logo span { color: var(--gold); }
+        nav { display: flex; gap: 28px; }
+        nav a {
+            color: rgba(255,255,255,0.85);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        nav a:hover { color: var(--gold); }
+
+        /* HERO */
+        .hero {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+            color: var(--white);
+            padding: 80px 24px;
+            text-align: center;
+        }
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.6rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            line-height: 1.2;
+        }
+        .hero h1 span { color: var(--gold); }
+        .hero .subtitle {
+            font-size: 1.15rem;
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 8px;
+        }
+        .hero .bar-info {
+            font-size: 0.95rem;
+            color: var(--gold-light);
+            margin-bottom: 32px;
+        }
+        .hero-cta {
+            display: inline-flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-decoration: none;
+            transition: all 0.25s;
+        }
+        .btn-gold {
+            background: var(--gold);
+            color: var(--navy);
+        }
+        .btn-gold:hover { background: var(--gold-light); transform: translateY(-2px); }
+        .btn-outline {
+            border: 2px solid rgba(255,255,255,0.4);
+            color: var(--white);
+        }
+        .btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+
+        /* SECTIONS */
+        section { padding: 72px 24px; }
+        .container { max-width: 1100px; margin: 0 auto; }
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--navy);
+            margin-bottom: 12px;
+            text-align: center;
+        }
+        .section-subtitle {
+            text-align: center;
+            color: var(--gray);
+            margin-bottom: 48px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .gold-line {
+            width: 60px;
+            height: 3px;
+            background: var(--gold);
+            margin: 16px auto 20px;
+        }
+
+        /* ABOUT */
+        .about-bg { background: var(--cream); }
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .about-content p {
+            color: var(--gray);
+            font-size: 1.05rem;
+            margin-bottom: 16px;
+        }
+        .about-badges {
+            display: flex;
+            gap: 32px;
+            justify-content: center;
+            margin-top: 32px;
+            flex-wrap: wrap;
+        }
+        .badge {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--white);
+            padding: 14px 22px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+        .badge-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--navy);
+            color: var(--gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+        .badge-text { font-size: 0.9rem; font-weight: 600; color: var(--navy); }
+
+        /* SPECIALTIES */
+        .spec-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+        .spec-card {
+            background: var(--white);
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 32px 28px;
+            transition: all 0.3s;
+        }
+        .spec-card:hover {
+            border-color: var(--gold);
+            box-shadow: 0 4px 20px rgba(197,162,88,0.12);
+            transform: translateY(-3px);
+        }
+        .spec-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--cream);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 18px;
+            font-size: 1.3rem;
+        }
+        .spec-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.15rem;
+            color: var(--navy);
+            margin-bottom: 10px;
+        }
+        .spec-card p {
+            color: var(--gray);
+            font-size: 0.92rem;
+            line-height: 1.6;
+        }
+
+        /* APPROACH */
+        .approach-bg { background: var(--cream); }
+        .approach-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 28px;
+        }
+        .approach-item {
+            text-align: center;
+            padding: 28px 20px;
+        }
+        .approach-num {
+            width: 48px;
+            height: 48px;
+            background: var(--navy);
+            color: var(--gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 16px;
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+        .approach-item h3 {
+            font-size: 1rem;
+            color: var(--navy);
+            margin-bottom: 8px;
+        }
+        .approach-item p {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        /* TARIFS */
+        .tarifs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .tarif-card {
+            background: var(--cream);
+            border-radius: 10px;
+            padding: 24px;
+            text-align: center;
+        }
+        .tarif-card h3 {
+            font-size: 0.95rem;
+            color: var(--navy);
+            margin-bottom: 8px;
+        }
+        .tarif-price {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--gold);
+            font-weight: 700;
+        }
+        .tarif-price small { font-size: 0.7rem; color: var(--gray); }
+        .tarif-note {
+            font-size: 0.82rem;
+            color: var(--gray);
+            margin-top: 6px;
+        }
+        .aj-note {
+            text-align: center;
+            margin-top: 24px;
+            padding: 16px;
+            background: var(--navy);
+            color: var(--white);
+            border-radius: 8px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .aj-note strong { color: var(--gold); }
+
+        /* CONTACT */
+        .contact-bg { background: var(--navy); color: var(--white); }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: start;
+        }
+        .contact-info h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            margin-bottom: 24px;
+            color: var(--gold);
+        }
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            margin-bottom: 20px;
+        }
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(197,162,88,0.15);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold);
+            font-size: 1rem;
+            flex-shrink: 0;
+        }
+        .contact-item-text { font-size: 0.95rem; }
+        .contact-item-text a { color: var(--gold-light); text-decoration: none; }
+        .contact-item-text a:hover { text-decoration: underline; }
+        .contact-item-label { font-size: 0.8rem; color: rgba(255,255,255,0.6); margin-bottom: 2px; }
+        .contact-form {
+            background: rgba(255,255,255,0.08);
+            border-radius: 12px;
+            padding: 32px;
+        }
+        .contact-form h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: var(--gold);
+        }
+        .form-group { margin-bottom: 16px; }
+        .form-group label {
+            display: block;
+            font-size: 0.85rem;
+            margin-bottom: 6px;
+            color: rgba(255,255,255,0.7);
+        }
+        .form-group input, .form-group textarea, .form-group select {
+            width: 100%;
+            padding: 12px 14px;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 6px;
+            color: var(--white);
+            font-size: 0.95rem;
+            font-family: 'Inter', sans-serif;
+        }
+        .form-group input::placeholder, .form-group textarea::placeholder {
+            color: rgba(255,255,255,0.4);
+        }
+        .form-group textarea { resize: vertical; min-height: 100px; }
+        .btn-submit {
+            width: 100%;
+            padding: 14px;
+            background: var(--gold);
+            color: var(--navy);
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .btn-submit:hover { background: var(--gold-light); }
+
+        /* FOOTER */
+        footer {
+            background: #111827;
+            color: rgba(255,255,255,0.5);
+            text-align: center;
+            padding: 24px;
+            font-size: 0.82rem;
+        }
+        footer a { color: var(--gold-light); text-decoration: none; }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 1.9rem; }
+            .hero { padding: 56px 20px; }
+            section { padding: 52px 20px; }
+            nav { display: none; }
+            .contact-grid { grid-template-columns: 1fr; }
+            .about-badges { flex-direction: column; align-items: center; }
+            .spec-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-inner">
+        <div class="logo">Sylviane <span>Guiard</span></div>
+        <nav>
+            <a href="#cabinet">Le cabinet</a>
+            <a href="#domaines">Domaines</a>
+            <a href="#approche">Approche</a>
+            <a href="#honoraires">Honoraires</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="container">
+        <h1>Maître Sylviane <span>Guiard</span></h1>
+        <p class="subtitle">Avocate au Barreau de Perpignan</p>
+        <p class="bar-info">Droit de la famille &middot; Droit immobilier &middot; Successions &middot; Droit collaboratif</p>
+        <div class="hero-cta">
+            <a href="tel:0682247984" class="btn btn-gold">Appeler le 06 82 24 79 84</a>
+            <a href="#contact" class="btn btn-outline">Prendre rendez-vous</a>
+        </div>
+    </div>
+</section>
+
+<section class="about-bg" id="cabinet">
+    <div class="container">
+        <h2 class="section-title">Le cabinet</h2>
+        <div class="gold-line"></div>
+        <div class="about-content">
+            <p>Avocate inscrite au Barreau de Perpignan depuis 2005, Maître Sylviane Guiard accompagne les particuliers et les familles dans leurs démarches juridiques avec rigueur et humanité. Titulaire d'un Master en droit privé et d'un diplôme de procédure de l'Université de Perpignan, elle allie compétence technique et écoute attentive.</p>
+            <p>Formée au droit collaboratif, elle privilégie les solutions amiables lorsque le contexte le permet, tout en défendant fermement les intérêts de ses clients devant les juridictions quand la situation l'exige.</p>
+            <div class="about-badges">
+                <div class="badge">
+                    <div class="badge-icon">21</div>
+                    <div class="badge-text">Années d'expérience</div>
+                </div>
+                <div class="badge">
+                    <div class="badge-icon">ADE</div>
+                    <div class="badge-text">Avocat Défense Enfants</div>
+                </div>
+                <div class="badge">
+                    <div class="badge-icon">AJ</div>
+                    <div class="badge-text">Aide juridictionnelle</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="domaines">
+    <div class="container">
+        <h2 class="section-title">Domaines d'intervention</h2>
+        <div class="gold-line"></div>
+        <p class="section-subtitle">Un accompagnement sur mesure pour chaque situation, de la négociation amiable à la procédure judiciaire.</p>
+        <div class="spec-grid">
+            <div class="spec-card">
+                <div class="spec-icon">&#9825;</div>
+                <h3>Droit de la famille</h3>
+                <p>Divorce, séparation, garde d'enfants, pension alimentaire, autorité parentale. Une approche humaine pour protéger les intérêts de chaque membre de la famille.</p>
+            </div>
+            <div class="spec-card">
+                <div class="spec-icon">&#9962;</div>
+                <h3>Droit immobilier</h3>
+                <p>Ventes immobilières, litiges locatifs, baux d'habitation, copropriété. De la négociation du contrat au contentieux, un conseil éclairé à chaque étape.</p>
+            </div>
+            <div class="spec-card">
+                <div class="spec-icon">&#9881;</div>
+                <h3>Droit de la construction</h3>
+                <p>Malfaçons, garanties décennale et biennale, expertises judiciaires, réception des travaux. Défense de vos droits face aux professionnels du bâtiment.</p>
+            </div>
+            <div class="spec-card">
+                <div class="spec-icon">&#9999;</div>
+                <h3>Successions</h3>
+                <p>Règlement de successions, contestation de testament, partage, donations. Un accompagnement rigoureux pour des situations souvent délicates.</p>
+            </div>
+            <div class="spec-card">
+                <div class="spec-icon">&#9994;</div>
+                <h3>Droit des personnes</h3>
+                <p>Tutelle, curatelle, protection des majeurs vulnérables, état civil. Des procédures menées avec attention et respect de la dignité de chacun.</p>
+            </div>
+            <div class="spec-card">
+                <div class="spec-icon">&#10003;</div>
+                <h3>Droit collaboratif</h3>
+                <p>Résolution amiable des conflits par la négociation structurée. Une alternative au procès quand les parties souhaitent trouver un accord durable.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="approach-bg" id="approche">
+    <div class="container">
+        <h2 class="section-title">Mon approche</h2>
+        <div class="gold-line"></div>
+        <p class="section-subtitle">Chaque dossier est unique. Ma méthode repose sur l'écoute, la clarté et l'engagement.</p>
+        <div class="approach-grid">
+            <div class="approach-item">
+                <div class="approach-num">1</div>
+                <h3>Premier rendez-vous</h3>
+                <p>Analyse de votre situation, identification des enjeux et définition d'une stratégie adaptée à vos objectifs.</p>
+            </div>
+            <div class="approach-item">
+                <div class="approach-num">2</div>
+                <h3>Conseil et orientation</h3>
+                <p>Explication claire de vos droits, des options disponibles et de la procédure envisagée, en toute transparence.</p>
+            </div>
+            <div class="approach-item">
+                <div class="approach-num">3</div>
+                <h3>Action et suivi</h3>
+                <p>Mise en oeuvre de la stratégie, rédaction des actes, représentation en justice et suivi jusqu'à la résolution de votre dossier.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="honoraires">
+    <div class="container">
+        <h2 class="section-title">Honoraires</h2>
+        <div class="gold-line"></div>
+        <p class="section-subtitle">Des tarifs transparents pour des consultations adaptées à vos besoins.</p>
+        <div class="tarifs-grid">
+            <div class="tarif-card">
+                <h3>Consultation au cabinet</h3>
+                <div class="tarif-price">60 <small>EUR TTC</small></div>
+                <p class="tarif-note">30 minutes</p>
+            </div>
+            <div class="tarif-card">
+                <h3>Consultation téléphonique</h3>
+                <div class="tarif-price">60 <small>EUR TTC</small></div>
+                <p class="tarif-note">30 minutes</p>
+            </div>
+            <div class="tarif-card">
+                <h3>Consultation vidéo</h3>
+                <div class="tarif-price">70 <small>EUR TTC</small></div>
+                <p class="tarif-note">30 minutes</p>
+            </div>
+            <div class="tarif-card">
+                <h3>Consultation écrite détaillée</h3>
+                <div class="tarif-price">180 <small>EUR TTC</small></div>
+                <p class="tarif-note">Analyse approfondie</p>
+            </div>
+        </div>
+        <div class="aj-note">
+            <strong>Aide juridictionnelle acceptée</strong> — Si vos revenus sont modestes, vous pouvez bénéficier de la prise en charge totale ou partielle de vos frais d'avocat par l'État.
+        </div>
+    </div>
+</section>
+
+<section class="contact-bg" id="contact">
+    <div class="container">
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h3>Coordonnées du cabinet</h3>
+                <div class="contact-item">
+                    <div class="contact-icon">&#9993;</div>
+                    <div class="contact-item-text">
+                        <div class="contact-item-label">Adresse</div>
+                        3 Place François Arago, 2e étage<br>66000 Perpignan
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">&#9742;</div>
+                    <div class="contact-item-text">
+                        <div class="contact-item-label">Téléphone</div>
+                        <a href="tel:0682247984">06 82 24 79 84</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">&#9993;</div>
+                    <div class="contact-item-text">
+                        <div class="contact-item-label">Email</div>
+                        <a href="mailto:sylviane-guiard@guiard-avocat.fr">sylviane-guiard@guiard-avocat.fr</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">&#9201;</div>
+                    <div class="contact-item-text">
+                        <div class="contact-item-label">Barreau</div>
+                        Barreau des Pyrénées-Orientales<br>Inscrite depuis 2005
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form">
+                <h3>Demander un rendez-vous</h3>
+                <div class="form-group">
+                    <label for="name">Nom complet</label>
+                    <input type="text" id="name" placeholder="Votre nom et prénom">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="votre@email.com">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Téléphone</label>
+                    <input type="tel" id="phone" placeholder="06 XX XX XX XX">
+                </div>
+                <div class="form-group">
+                    <label for="domaine">Domaine concerné</label>
+                    <select id="domaine">
+                        <option value="">Sélectionnez...</option>
+                        <option value="famille">Droit de la famille</option>
+                        <option value="immobilier">Droit immobilier</option>
+                        <option value="construction">Droit de la construction</option>
+                        <option value="successions">Successions</option>
+                        <option value="personnes">Droit des personnes</option>
+                        <option value="collaboratif">Droit collaboratif</option>
+                        <option value="autre">Autre</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Décrivez brièvement votre situation</label>
+                    <textarea id="message" placeholder="En quelques mots..."></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Envoyer ma demande</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 Maître Sylviane Guiard — Avocate au Barreau de Perpignan &middot; <a href="#">Mentions légales</a></p>
+</footer>
+
+</body>
+</html>
